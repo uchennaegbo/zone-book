@@ -9,7 +9,7 @@
 
     <div class="col-9 pt-5">
       <div>
-        <h1>Test User </h1>
+        <h1>{{$user -> username}}</h1>
       </div>
 
       <div class="d-flex">
@@ -19,11 +19,10 @@
       </div>
 
 
-      <div class="font-weight-bold">Test user</div>
-      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Molestiae non at quod nostrum cumque in asperiores
-        voluptatibus! Voluptates, maiores cumque!</div>
-      <div><a href="http://" target="_blank" rel="noopener noreferrer">testlink.org</a></div>
+      <div class="font-weight-bold">{{$user->profile->title}}</div>
+      <div>{{$user->profile->description}}</div>
+      <div><a href="http://" target="_blank" rel="noopener noreferrer">{{$user->profile->url ?? 'website.url'}}</a>
+      </div>
     </div>
   </div>
 
