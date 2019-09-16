@@ -26,8 +26,8 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand d-flex" href="{{ url('/') }}">
-          <div><img src="/svg/zoneBookLogo.png" alt="main app logo" style="height:25px; border-right:1px solid #333"
-              class="pr-3"></div>
+          <div><img src="https://img.icons8.com/ios-glyphs/2x/book.png" alt="main app logo"
+              style="height:25px; border-right:1px solid #333" class="pr-3"></div>
           <div class="pl-3 pt-1">ZoneBook</div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
