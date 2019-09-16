@@ -25,8 +25,8 @@
 
       <div class="d-flex">
         <div class="pr-5"><strong>{{$user->books->count()}}</strong> books</div>
-        <div class="pr-5"><strong>553</strong> followers</div>
-        <div class="pr-5"><strong>100</strong> following</div>
+        <div class="pr-5"><strong>{{$user->profile->followers->count()}}</strong> followers</div>
+        <div class="pr-5"><strong>{{$user->following->count()}}</strong> following</div>
       </div>
 
       <div class="font-weight-bold">{{$user->profile->title}}</div>
