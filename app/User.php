@@ -41,11 +41,13 @@ class User extends Authenticatable
     {
         parent::boot();
 
-        static::created(function($user) {
-            $user->profile()->create(
-                [
-                    'title' => $user->username,
-                ]);
+        static::created(
+            function ($user) {
+                $user->profile()->create(
+                    [
+                        'title' => $user->username,
+                    ]
+                );
             }
         );
     }
@@ -53,6 +55,11 @@ class User extends Authenticatable
     public function books()
     {
         return $this->hasMany(Book::class)->orderBy('created_at', 'desc');
+    }
+
+    public function following()
+    {
+        return $this->belongsToMany(Profile::class);
     }
 
     public function profile()
